@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete-Me</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+
+</body>
+
+<script>
+
+	function NumberMe(n){
+		
+		var fCounter = prevCounterA = 0, prevCounterB = 0;
+		for(var loop=0; loop<=n; loop++){
+
+			fCounter = prevCounterA + prevCounterB;
+			prevCounterA = ((fCounter === 0) ? 1 : prevCounterB);
+			prevCounterB = fCounter;
+
+			console.log("After  " + loop + ":" + fCounter + ' - ' );
+		}
+
+		return fCounter
+	}
+
+	var n = 10;
+	console.log(n + 'n = ' + NumberMe(n));
+
+</script>
+
+</html>

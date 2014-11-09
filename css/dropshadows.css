@@ -1,0 +1,123 @@
+/*
+ * Source http://nicolasgallagher.com/css-drop-shadows-without-images/
+ */
+.dropshadow:before, .dropshadow:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+}
+
+.dropshadow-lifted:before, .dropshadow-lifted:after {
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+  max-width: 300px;
+  max-height: 100px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.dropshadow-curled:before, .dropshadow-curled:after {
+  bottom: 12px;
+  left: 10px;
+  width: 50%;
+  height: 55%;
+  max-width: 200px;
+  max-height: 100px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  -webkit-transform: skew(-8deg) rotate(-3deg);
+      -ms-transform: skew(-8deg) rotate(-3deg);
+          transform: skew(-8deg) rotate(-3deg);
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dropshadow {
+  position: relative;
+  background: #fcfcfc;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+.dropshadow-lifted:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+.dropshadow-curled {
+  border-radius: 0 0 120px 120px / 0 0 6px 6px;
+}
+.dropshadow-curled:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+      -ms-transform: skew(8deg) rotate(3deg);
+          transform: skew(8deg) rotate(3deg);
+}
+
+.dropshadow-perspective:before {
+  left: 80px;
+  bottom: 5px;
+  width: 50%;
+  height: 35%;
+  max-width: 200px;
+  max-height: 50px;
+  box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
+  -webkit-transform: skew(50deg);
+      -ms-transform: skew(50deg);
+          transform: skew(50deg);
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+.dropshadow-perspective:after {
+  display: none;
+}
+
+.dropshadow-raised {
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+.dropshadow-singleVert:before {
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  border-radius: 10px / 100px;
+}
+
+.dropshadow-vertical:before {
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  border-radius: 10px / 100px;
+  right: 0;
+}
+
+.dropshadow-singleHortz:before {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  top: 50%;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 100px / 10px;
+}
+
+.dropshadow-horizontal:before {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 100px / 10px;
+}
