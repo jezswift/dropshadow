@@ -1,12 +1,14 @@
 /*
  * Source http://nicolasgallagher.com/css-drop-shadows-without-images/
  */
+/* line 15, ../sass/dropshadows.scss */
 .dropshadow:before, .dropshadow:after {
   content: "";
   position: absolute;
   z-index: -2;
 }
 
+/* line 20, ../sass/dropshadows.scss */
 .dropshadow-lifted:before, .dropshadow-lifted:after {
   bottom: 15px;
   left: 10px;
@@ -14,12 +16,14 @@
   height: 20%;
   max-width: 300px;
   max-height: 100px;
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
   -webkit-transform: rotate(-3deg);
-      -ms-transform: rotate(-3deg);
-          transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
 }
 
+/* line 32, ../sass/dropshadows.scss */
 .dropshadow-curled:before, .dropshadow-curled:after {
   bottom: 12px;
   left: 10px;
@@ -27,42 +31,50 @@
   height: 55%;
   max-width: 200px;
   max-height: 100px;
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
   -webkit-transform: skew(-8deg) rotate(-3deg);
-      -ms-transform: skew(-8deg) rotate(-3deg);
-          transform: skew(-8deg) rotate(-3deg);
+  -ms-transform: skew(-8deg) rotate(-3deg);
+  transform: skew(-8deg) rotate(-3deg);
 }
 
+/* line 45, ../sass/dropshadows.scss */
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* line 50, ../sass/dropshadows.scss */
 .dropshadow {
   position: relative;
   background: #fcfcfc;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
 }
 
+/* line 66, ../sass/dropshadows.scss */
 .dropshadow-lifted:after {
   right: 10px;
   left: auto;
   -webkit-transform: rotate(3deg);
-      -ms-transform: rotate(3deg);
-          transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
 }
 
+/* line 74, ../sass/dropshadows.scss */
 .dropshadow-curled {
   border-radius: 0 0 120px 120px / 0 0 6px 6px;
 }
+/* line 80, ../sass/dropshadows.scss */
 .dropshadow-curled:after {
   right: 10px;
   left: auto;
   -webkit-transform: skew(8deg) rotate(3deg);
-      -ms-transform: skew(8deg) rotate(3deg);
-          transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
 }
 
+/* line 89, ../sass/dropshadows.scss */
 .dropshadow-perspective:before {
   left: 80px;
   bottom: 5px;
@@ -70,41 +82,51 @@ html * {
   height: 35%;
   max-width: 200px;
   max-height: 50px;
+  -webkit-box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
   box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
   -webkit-transform: skew(50deg);
-      -ms-transform: skew(50deg);
-          transform: skew(50deg);
+  -ms-transform: skew(50deg);
+  transform: skew(50deg);
   -webkit-transform-origin: 0 100%;
-      -ms-transform-origin: 0 100%;
-          transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
 }
+/* line 103, ../sass/dropshadows.scss */
 .dropshadow-perspective:after {
   display: none;
 }
 
+/* line 107, ../sass/dropshadows.scss */
 .dropshadow-raised {
+  -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
 }
 
+/* line 111, ../sass/dropshadows.scss */
 .dropshadow-singleVert:before {
   top: 10px;
   bottom: 10px;
   left: 0;
   right: 50%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   border-radius: 10px / 100px;
 }
 
+/* line 121, ../sass/dropshadows.scss */
 .dropshadow-vertical:before {
   top: 10px;
   bottom: 10px;
   left: 0;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   border-radius: 10px / 100px;
   right: 0;
 }
 
+/* line 131, ../sass/dropshadows.scss */
 .dropshadow-singleHortz:before {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   top: 50%;
   bottom: 0;
@@ -113,7 +135,9 @@ html * {
   border-radius: 100px / 10px;
 }
 
+/* line 141, ../sass/dropshadows.scss */
 .dropshadow-horizontal:before {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   top: 0;
   bottom: 0;
